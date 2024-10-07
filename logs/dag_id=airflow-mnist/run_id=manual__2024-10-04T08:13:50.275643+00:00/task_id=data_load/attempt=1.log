@@ -1,0 +1,39 @@
+[2024-10-04T08:13:51.481+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: airflow-mnist.data_load manual__2024-10-04T08:13:50.275643+00:00 [queued]>
+[2024-10-04T08:13:51.487+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: airflow-mnist.data_load manual__2024-10-04T08:13:50.275643+00:00 [queued]>
+[2024-10-04T08:13:51.487+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-04T08:13:51.487+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-10-04T08:13:51.487+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-04T08:13:51.498+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): data_load> on 2024-10-04 08:13:50.275643+00:00
+[2024-10-04T08:13:51.505+0000] {standard_task_runner.py:55} INFO - Started process 515 to run task
+[2024-10-04T08:13:51.507+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', '***-mnist', 'data_load', 'manual__2024-10-04T08:13:50.275643+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/src/main.py', '--cfg-path', '/tmp/tmp_eja61x1']
+[2024-10-04T08:13:51.508+0000] {standard_task_runner.py:83} INFO - Job 3: Subtask data_load
+[2024-10-04T08:13:51.552+0000] {task_command.py:388} INFO - Running <TaskInstance: airflow-mnist.data_load manual__2024-10-04T08:13:50.275643+00:00 [running]> on host be56adf0b2de
+[2024-10-04T08:13:51.600+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=***-mnist
+AIRFLOW_CTX_TASK_ID=data_load
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-04T08:13:50.275643+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-04T08:13:50.275643+00:00
+[2024-10-04T08:13:51.602+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-04T08:13:51.602+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python /opt/***/dags/src/data_load.py --train_data_path /home/***/gcs/data/mnist/train/mnist.npz --test_data_path /home/***/gcs/data/mnist/test/mnist.npz']
+[2024-10-04T08:13:51.619+0000] {subprocess.py:86} INFO - Output:
+[2024-10-04T08:13:51.737+0000] {subprocess.py:93} INFO - 2024-10-04 08:13:51.737228: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+[2024-10-04T08:13:51.737+0000] {subprocess.py:93} INFO - To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[2024-10-04T08:13:51.995+0000] {subprocess.py:93} INFO - 2024-10-04 08:13:51.994997: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/lib
+[2024-10-04T08:13:51.995+0000] {subprocess.py:93} INFO - 2024-10-04 08:13:51.995035: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+[2024-10-04T08:13:52.035+0000] {subprocess.py:93} INFO - 2024-10-04 08:13:52.035117: E tensorflow/stream_executor/cuda/cuda_blas.cc:2981] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+[2024-10-04T08:13:53.083+0000] {subprocess.py:93} INFO - 2024-10-04 08:13:53.083203: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/lib
+[2024-10-04T08:13:53.083+0000] {subprocess.py:93} INFO - 2024-10-04 08:13:53.083327: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/lib
+[2024-10-04T08:13:53.083+0000] {subprocess.py:93} INFO - 2024-10-04 08:13:53.083337: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+[2024-10-04T08:13:54.785+0000] {subprocess.py:93} INFO - Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+[2024-10-04T08:13:56.168+0000] {subprocess.py:93} INFO -     8192/11490434 [..............................] - ETA: 0s   49152/11490434 [..............................] - ETA: 26s   81920/11490434 [..............................] - ETA: 31s  598016/11490434 [>.............................] - ETA: 5s  1294336/11490434 [==>...........................] - ETA: 2s 1720320/11490434 [===>..........................] - ETA: 2s 2613248/11490434 [=====>........................] - ETA: 1s 3317760/11490434 [=======>......................] - ETA: 1s 3923968/11490434 [=========>....................] - ETA: 1s 4538368/11490434 [==========>...................] - ETA: 0s 5177344/11490434 [============>.................] - ETA: 0s 5799936/11490434 [==============>...............] - ETA: 0s 6430720/11490434 [===============>..............] - ETA: 0s 7045120/11490434 [=================>............] - ETA: 0s 7667712/11490434 [===================>..........] - ETA: 0s 8306688/11490434 [====================>.........] - ETA: 0s 8929280/11490434 [======================>.......] - ETA: 0s 9551872/11490434 [=======================>......] - ETA: 0s10174464/11490434 [=========================>....] - ETA: 0s10813440/11490434 [===========================>..] - ETA: 0s11490434/11490434 [==============================] - 1s 0us/step
+[2024-10-04T08:13:56.440+0000] {subprocess.py:93} INFO - save train_data in :/home/***/gcs/data/mnist/train/mnist.npz
+[2024-10-04T08:13:56.441+0000] {subprocess.py:93} INFO - save test_data in :/home/***/gcs/data/mnist/test/mnist.npz
+[2024-10-04T08:13:56.813+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-10-04T08:13:56.832+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=***-mnist, task_id=data_load, execution_date=20241004T081350, start_date=20241004T081351, end_date=20241004T081356
+[2024-10-04T08:13:56.885+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-10-04T08:13:56.904+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
