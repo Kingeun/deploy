@@ -1,0 +1,20 @@
+[2024-10-11T11:08:27.283+0000] {processor.py:153} INFO - Started process (PID=2173) to work on /opt/airflow/dags/transform/model/model.torchscript
+[2024-10-11T11:08:27.284+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/transform/model/model.torchscript for tasks to queue
+[2024-10-11T11:08:27.284+0000] {logging_mixin.py:137} INFO - [2024-10-11T11:08:27.284+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/transform/model/model.torchscript
+[2024-10-11T11:08:27.294+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/transform/model/model.torchscript
+[2024-10-11T11:08:27.304+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/transform/model/model.torchscript took 0.023 seconds
+[2024-10-11T11:08:57.631+0000] {processor.py:153} INFO - Started process (PID=2291) to work on /opt/airflow/dags/transform/model/model.torchscript
+[2024-10-11T11:08:57.632+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/transform/model/model.torchscript for tasks to queue
+[2024-10-11T11:08:57.632+0000] {logging_mixin.py:137} INFO - [2024-10-11T11:08:57.632+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/transform/model/model.torchscript
+[2024-10-11T11:08:57.642+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/transform/model/model.torchscript
+[2024-10-11T11:08:57.652+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/transform/model/model.torchscript took 0.023 seconds
+[2024-10-11T11:09:28.193+0000] {processor.py:153} INFO - Started process (PID=2385) to work on /opt/airflow/dags/transform/model/model.torchscript
+[2024-10-11T11:09:28.193+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/transform/model/model.torchscript for tasks to queue
+[2024-10-11T11:09:28.194+0000] {logging_mixin.py:137} INFO - [2024-10-11T11:09:28.193+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/transform/model/model.torchscript
+[2024-10-11T11:09:28.203+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/transform/model/model.torchscript
+[2024-10-11T11:09:28.213+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/transform/model/model.torchscript took 0.023 seconds
+[2024-10-11T11:09:58.312+0000] {processor.py:153} INFO - Started process (PID=2503) to work on /opt/airflow/dags/transform/model/model.torchscript
+[2024-10-11T11:09:58.313+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/transform/model/model.torchscript for tasks to queue
+[2024-10-11T11:09:58.313+0000] {logging_mixin.py:137} INFO - [2024-10-11T11:09:58.313+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/transform/model/model.torchscript
+[2024-10-11T11:09:58.323+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/transform/model/model.torchscript
+[2024-10-11T11:09:58.332+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/transform/model/model.torchscript took 0.022 seconds

@@ -1,0 +1,55 @@
+[2024-10-11T11:21:03.404+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: convert_yolov9_to_trt.convert_to_trt manual__2024-10-11T11:19:57.131572+00:00 [queued]>
+[2024-10-11T11:21:03.411+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: convert_yolov9_to_trt.convert_to_trt manual__2024-10-11T11:19:57.131572+00:00 [queued]>
+[2024-10-11T11:21:03.411+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-11T11:21:03.411+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2024-10-11T11:21:03.411+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-11T11:21:03.421+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): convert_to_trt> on 2024-10-11 11:19:57.131572+00:00
+[2024-10-11T11:21:03.427+0000] {standard_task_runner.py:55} INFO - Started process 3323 to run task
+[2024-10-11T11:21:03.430+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'convert_yolov9_to_trt', 'convert_to_trt', 'manual__2024-10-11T11:19:57.131572+00:00', '--job-id', '191', '--raw', '--subdir', 'DAGS_FOLDER/transform/main.py', '--cfg-path', '/tmp/tmprvz6ai_f']
+[2024-10-11T11:21:03.430+0000] {standard_task_runner.py:83} INFO - Job 191: Subtask convert_to_trt
+[2024-10-11T11:21:03.474+0000] {task_command.py:388} INFO - Running <TaskInstance: convert_yolov9_to_trt.convert_to_trt manual__2024-10-11T11:19:57.131572+00:00 [running]> on host 4008dbb35820
+[2024-10-11T11:21:03.523+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=convert_yolov9_to_trt
+AIRFLOW_CTX_TASK_ID=convert_to_trt
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-11T11:19:57.131572+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-11T11:19:57.131572+00:00
+[2024-10-11T11:21:03.524+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-11T11:21:03.524+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python3 /opt/***/dags/transform/yolov9/export.py --weights /opt/***/dags/transform/model/model.pt --imgsz 1280 --device 0']
+[2024-10-11T11:21:03.538+0000] {subprocess.py:86} INFO - Output:
+[2024-10-11T11:21:06.238+0000] {subprocess.py:93} INFO - [34m[1mexport: [0mdata=../../opt/***/dags/transform/yolov9/data/coco.yaml, weights=['/opt/***/dags/transform/model/model.pt'], imgsz=[1280], batch_size=1, device=0, half=False, inplace=False, keras=False, optimize=False, int8=False, dynamic=False, simplify=False, opset=12, verbose=False, workspace=4, nms=False, agnostic_nms=False, topk_per_class=100, topk_all=100, iou_thres=0.45, conf_thres=0.25, include=['engine']
+[2024-10-11T11:21:06.254+0000] {subprocess.py:93} INFO - /bin/sh: 1: git: Permission denied
+[2024-10-11T11:21:06.308+0000] {subprocess.py:93} INFO - YOLO 🚀 2024-10-7 Python-3.7.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA GeForce RTX 3070, 7871MiB)
+[2024-10-11T11:21:06.308+0000] {subprocess.py:93} INFO - 
+[2024-10-11T11:21:06.695+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-10-11T11:21:06.695+0000] {subprocess.py:93} INFO -   File "/opt/***/dags/transform/yolov9/export.py", line 686, in <module>
+[2024-10-11T11:21:06.695+0000] {subprocess.py:93} INFO -     main(opt)
+[2024-10-11T11:21:06.695+0000] {subprocess.py:93} INFO -   File "/opt/***/dags/transform/yolov9/export.py", line 681, in main
+[2024-10-11T11:21:06.696+0000] {subprocess.py:93} INFO -     run(**vars(opt))
+[2024-10-11T11:21:06.696+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+[2024-10-11T11:21:06.696+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2024-10-11T11:21:06.696+0000] {subprocess.py:93} INFO -   File "/opt/***/dags/transform/yolov9/export.py", line 544, in run
+[2024-10-11T11:21:06.696+0000] {subprocess.py:93} INFO -     model = attempt_load(weights, device=device, inplace=True, fuse=True)  # load FP32 model
+[2024-10-11T11:21:06.696+0000] {subprocess.py:93} INFO -   File "/opt/***/dags/transform/yolov9/models/experimental.py", line 243, in attempt_load
+[2024-10-11T11:21:06.696+0000] {subprocess.py:93} INFO -     ckpt = torch.load(attempt_download(w), map_location='cpu')  # load
+[2024-10-11T11:21:06.696+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/torch/serialization.py", line 771, in load
+[2024-10-11T11:21:06.696+0000] {subprocess.py:93} INFO -     with _open_file_like(f, 'rb') as opened_file:
+[2024-10-11T11:21:06.696+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/torch/serialization.py", line 270, in _open_file_like
+[2024-10-11T11:21:06.696+0000] {subprocess.py:93} INFO -     return _open_file(name_or_buffer, mode)
+[2024-10-11T11:21:06.696+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.7/site-packages/torch/serialization.py", line 251, in __init__
+[2024-10-11T11:21:06.696+0000] {subprocess.py:93} INFO -     super(_open_file, self).__init__(open(name, mode))
+[2024-10-11T11:21:06.696+0000] {subprocess.py:93} INFO - FileNotFoundError: [Errno 2] No such file or directory: '/opt/***/dags/transform/model/model.pt'
+[2024-10-11T11:21:07.100+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-10-11T11:21:07.109+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-10-11T11:21:07.111+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=convert_yolov9_to_trt, task_id=convert_to_trt, execution_date=20241011T111957, start_date=20241011T112103, end_date=20241011T112107
+[2024-10-11T11:21:07.119+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 191 for task convert_to_trt (Bash command failed. The command returned a non-zero exit code 1.; 3323)
+[2024-10-11T11:21:07.129+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-10-11T11:21:07.142+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,45 @@
+[2024-10-11T11:04:43.389+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: convert_yolov9_to_trt.convert_to_trt manual__2024-10-11T11:04:41.258066+00:00 [queued]>
+[2024-10-11T11:04:43.397+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: convert_yolov9_to_trt.convert_to_trt manual__2024-10-11T11:04:41.258066+00:00 [queued]>
+[2024-10-11T11:04:43.397+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-11T11:04:43.398+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-10-11T11:04:43.398+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-11T11:04:43.406+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): convert_to_trt> on 2024-10-11 11:04:41.258066+00:00
+[2024-10-11T11:04:43.412+0000] {standard_task_runner.py:55} INFO - Started process 1069 to run task
+[2024-10-11T11:04:43.415+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'convert_yolov9_to_trt', 'convert_to_trt', 'manual__2024-10-11T11:04:41.258066+00:00', '--job-id', '181', '--raw', '--subdir', 'DAGS_FOLDER/transform/main.py', '--cfg-path', '/tmp/tmpe8vd5gzt']
+[2024-10-11T11:04:43.415+0000] {standard_task_runner.py:83} INFO - Job 181: Subtask convert_to_trt
+[2024-10-11T11:04:43.463+0000] {task_command.py:388} INFO - Running <TaskInstance: convert_yolov9_to_trt.convert_to_trt manual__2024-10-11T11:04:41.258066+00:00 [running]> on host 4008dbb35820
+[2024-10-11T11:04:43.513+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=convert_yolov9_to_trt
+AIRFLOW_CTX_TASK_ID=convert_to_trt
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-11T11:04:41.258066+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-11T11:04:41.258066+00:00
+[2024-10-11T11:04:43.514+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-11T11:04:43.514+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python3 /opt/***/dags/transform/yolov9/export.py --weights /opt/***/dags/transform/model/model.pt --imgsz 640']
+[2024-10-11T11:04:43.529+0000] {subprocess.py:86} INFO - Output:
+[2024-10-11T11:04:46.183+0000] {subprocess.py:93} INFO - [34m[1mexport: [0mdata=../../opt/***/dags/transform/yolov9/data/coco.yaml, weights=['/opt/***/dags/transform/model/model.pt'], imgsz=[640], batch_size=1, device=cpu, half=False, inplace=False, keras=False, optimize=False, int8=False, dynamic=False, simplify=False, opset=12, verbose=False, workspace=4, nms=False, agnostic_nms=False, topk_per_class=100, topk_all=100, iou_thres=0.45, conf_thres=0.25, include=['torchscript']
+[2024-10-11T11:04:46.199+0000] {subprocess.py:93} INFO - /bin/sh: 1: git: Permission denied
+[2024-10-11T11:04:46.200+0000] {subprocess.py:93} INFO - YOLO 🚀 2024-10-7 Python-3.7.16 torch-1.13.1+cu117 CPU
+[2024-10-11T11:04:46.200+0000] {subprocess.py:93} INFO - 
+[2024-10-11T11:04:46.341+0000] {subprocess.py:93} INFO - Fusing layers...
+[2024-10-11T11:04:46.600+0000] {subprocess.py:93} INFO - gelan-s summary: 489 layers, 7105888 parameters, 34224 gradients, 26.4 GFLOPs
+[2024-10-11T11:04:46.894+0000] {subprocess.py:93} INFO - 
+[2024-10-11T11:04:46.894+0000] {subprocess.py:93} INFO - [34m[1mPyTorch:[0m starting from /opt/***/dags/transform/model/model.pt with output shape (1, 84, 8400) (14.3 MB)
+[2024-10-11T11:04:46.917+0000] {subprocess.py:93} INFO - 
+[2024-10-11T11:04:46.917+0000] {subprocess.py:93} INFO - [34m[1mTorchScript:[0m starting export with torch 1.13.1+cu117...
+[2024-10-11T11:04:49.600+0000] {subprocess.py:93} INFO - [34m[1mTorchScript:[0m export success ✅ 2.7s, saved as /opt/***/dags/transform/model/model.torchscript (28.0 MB)
+[2024-10-11T11:04:49.600+0000] {subprocess.py:93} INFO - 
+[2024-10-11T11:04:49.600+0000] {subprocess.py:93} INFO - Export complete (3.4s)
+[2024-10-11T11:04:49.601+0000] {subprocess.py:93} INFO - Results saved to [1m/opt/***/dags/transform/model[0m
+[2024-10-11T11:04:49.601+0000] {subprocess.py:93} INFO - Detect:          python detect.py --weights /opt/***/dags/transform/model/model.torchscript
+[2024-10-11T11:04:49.601+0000] {subprocess.py:93} INFO - Validate:        python val.py --weights /opt/***/dags/transform/model/model.torchscript
+[2024-10-11T11:04:49.601+0000] {subprocess.py:93} INFO - PyTorch Hub:     model = torch.hub.load('ultralytics/yolov5', 'custom', '/opt/***/dags/transform/model/model.torchscript')
+[2024-10-11T11:04:49.601+0000] {subprocess.py:93} INFO - Visualize:       https://netron.app
+[2024-10-11T11:04:50.095+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-10-11T11:04:50.115+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=convert_yolov9_to_trt, task_id=convert_to_trt, execution_date=20241011T110441, start_date=20241011T110443, end_date=20241011T110450
+[2024-10-11T11:04:50.160+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-10-11T11:04:50.177+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,25 @@
+[2024-10-11T11:01:25.044+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: convert_yolov9_to_trt.log_source_dir manual__2024-10-11T11:01:23.761496+00:00 [queued]>
+[2024-10-11T11:01:25.051+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: convert_yolov9_to_trt.log_source_dir manual__2024-10-11T11:01:23.761496+00:00 [queued]>
+[2024-10-11T11:01:25.051+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-11T11:01:25.051+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-10-11T11:01:25.051+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-11T11:01:25.060+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): log_source_dir> on 2024-10-11 11:01:23.761496+00:00
+[2024-10-11T11:01:25.066+0000] {standard_task_runner.py:55} INFO - Started process 547 to run task
+[2024-10-11T11:01:25.068+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'convert_yolov9_to_trt', 'log_source_dir', 'manual__2024-10-11T11:01:23.761496+00:00', '--job-id', '174', '--raw', '--subdir', 'DAGS_FOLDER/transform/main.py', '--cfg-path', '/tmp/tmpnn8sauj6']
+[2024-10-11T11:01:25.069+0000] {standard_task_runner.py:83} INFO - Job 174: Subtask log_source_dir
+[2024-10-11T11:01:25.112+0000] {task_command.py:388} INFO - Running <TaskInstance: convert_yolov9_to_trt.log_source_dir manual__2024-10-11T11:01:23.761496+00:00 [running]> on host 4008dbb35820
+[2024-10-11T11:01:25.158+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=convert_yolov9_to_trt
+AIRFLOW_CTX_TASK_ID=log_source_dir
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-11T11:01:23.761496+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-11T11:01:23.761496+00:00
+[2024-10-11T11:01:25.159+0000] {logging_mixin.py:137} INFO - -----------------------------------------------------------
+[2024-10-11T11:01:25.159+0000] {logging_mixin.py:137} INFO - source_dir: /opt/***/dags/transform
+[2024-10-11T11:01:25.159+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-10-11T11:01:25.167+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=convert_yolov9_to_trt, task_id=log_source_dir, execution_date=20241011T110123, start_date=20241011T110125, end_date=20241011T110125
+[2024-10-11T11:01:25.200+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2024-10-11T11:01:25.217+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,37 @@
+[2024-10-11T11:39:14.883+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: convert_yolov9_to_trt.convert_to_trt manual__2024-10-11T11:39:13.030855+00:00 [queued]>
+[2024-10-11T11:39:14.889+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: convert_yolov9_to_trt.convert_to_trt manual__2024-10-11T11:39:13.030855+00:00 [queued]>
+[2024-10-11T11:39:14.889+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-11T11:39:14.889+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2024-10-11T11:39:14.889+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-11T11:39:14.898+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): convert_to_trt> on 2024-10-11 11:39:13.030855+00:00
+[2024-10-11T11:39:14.904+0000] {standard_task_runner.py:55} INFO - Started process 570 to run task
+[2024-10-11T11:39:14.906+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'convert_yolov9_to_trt', 'convert_to_trt', 'manual__2024-10-11T11:39:13.030855+00:00', '--job-id', '202', '--raw', '--subdir', 'DAGS_FOLDER/transform/main.py', '--cfg-path', '/tmp/tmp2utvhgx3']
+[2024-10-11T11:39:14.906+0000] {standard_task_runner.py:83} INFO - Job 202: Subtask convert_to_trt
+[2024-10-11T11:39:14.947+0000] {task_command.py:388} INFO - Running <TaskInstance: convert_yolov9_to_trt.convert_to_trt manual__2024-10-11T11:39:13.030855+00:00 [running]> on host 91eb0b46c706
+[2024-10-11T11:39:14.993+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=convert_yolov9_to_trt
+AIRFLOW_CTX_TASK_ID=convert_to_trt
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-11T11:39:13.030855+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-11T11:39:13.030855+00:00
+[2024-10-11T11:39:14.994+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-11T11:39:14.995+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python3 /opt/***/dags/transform/yolov9/export.py --weights /opt/***/dags/transform/model/model.pt --imgsz 1280 --device 0']
+[2024-10-11T11:39:15.006+0000] {subprocess.py:86} INFO - Output:
+[2024-10-11T11:39:15.811+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-10-11T11:39:15.811+0000] {subprocess.py:93} INFO -   File "/opt/***/dags/transform/yolov9/export.py", line 14, in <module>
+[2024-10-11T11:39:15.811+0000] {subprocess.py:93} INFO -     import torch
+[2024-10-11T11:39:15.811+0000] {subprocess.py:93} INFO - ModuleNotFoundError: No module named 'torch'
+[2024-10-11T11:39:15.850+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-10-11T11:39:15.859+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-10-11T11:39:15.862+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=convert_yolov9_to_trt, task_id=convert_to_trt, execution_date=20241011T113913, start_date=20241011T113914, end_date=20241011T113915
+[2024-10-11T11:39:15.870+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 202 for task convert_to_trt (Bash command failed. The command returned a non-zero exit code 1.; 570)
+[2024-10-11T11:39:15.879+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-10-11T11:39:15.892+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

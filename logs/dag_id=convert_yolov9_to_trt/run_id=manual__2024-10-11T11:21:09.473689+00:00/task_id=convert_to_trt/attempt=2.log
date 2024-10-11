@@ -1,0 +1,28 @@
+[2024-10-11T11:22:16.098+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: convert_yolov9_to_trt.convert_to_trt manual__2024-10-11T11:21:09.473689+00:00 [queued]>
+[2024-10-11T11:22:16.117+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: convert_yolov9_to_trt.convert_to_trt manual__2024-10-11T11:21:09.473689+00:00 [queued]>
+[2024-10-11T11:22:16.117+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-11T11:22:16.117+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2024-10-11T11:22:16.117+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-11T11:22:16.134+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): convert_to_trt> on 2024-10-11 11:21:09.473689+00:00
+[2024-10-11T11:22:16.141+0000] {standard_task_runner.py:55} INFO - Started process 3550 to run task
+[2024-10-11T11:22:16.144+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'convert_yolov9_to_trt', 'convert_to_trt', 'manual__2024-10-11T11:21:09.473689+00:00', '--job-id', '196', '--raw', '--subdir', 'DAGS_FOLDER/transform/main.py', '--cfg-path', '/tmp/tmpbq2_4i3e']
+[2024-10-11T11:22:16.144+0000] {standard_task_runner.py:83} INFO - Job 196: Subtask convert_to_trt
+[2024-10-11T11:22:16.203+0000] {task_command.py:388} INFO - Running <TaskInstance: convert_yolov9_to_trt.convert_to_trt manual__2024-10-11T11:21:09.473689+00:00 [running]> on host 4008dbb35820
+[2024-10-11T11:22:16.260+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=convert_yolov9_to_trt
+AIRFLOW_CTX_TASK_ID=convert_to_trt
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-11T11:21:09.473689+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-11T11:21:09.473689+00:00
+[2024-10-11T11:22:16.262+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-11T11:22:16.263+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python3 /opt/***/dags/transform/yolov9/export.py --weights /opt/***/dags/transform/model/model.pt --imgsz 1280 --device 0']
+[2024-10-11T11:22:16.278+0000] {subprocess.py:86} INFO - Output:
+[2024-10-11T11:22:19.603+0000] {subprocess.py:93} INFO - [34m[1mexport: [0mdata=../../opt/***/dags/transform/yolov9/data/coco.yaml, weights=['/opt/***/dags/transform/model/model.pt'], imgsz=[1280], batch_size=1, device=0, half=False, inplace=False, keras=False, optimize=False, int8=False, dynamic=False, simplify=False, opset=12, verbose=False, workspace=4, nms=False, agnostic_nms=False, topk_per_class=100, topk_all=100, iou_thres=0.45, conf_thres=0.25, include=['engine']
+[2024-10-11T11:22:19.623+0000] {subprocess.py:93} INFO - /bin/sh: 1: git: Permission denied
+[2024-10-11T11:22:19.660+0000] {subprocess.py:93} INFO - YOLO 🚀 2024-10-7 Python-3.7.16 torch-1.13.1+cu117 CUDA:0 (NVIDIA GeForce RTX 3070, 7871MiB)
+[2024-10-11T11:22:19.660+0000] {subprocess.py:93} INFO - 
+[2024-10-11T11:22:21.129+0000] {subprocess.py:93} INFO - Fusing layers...

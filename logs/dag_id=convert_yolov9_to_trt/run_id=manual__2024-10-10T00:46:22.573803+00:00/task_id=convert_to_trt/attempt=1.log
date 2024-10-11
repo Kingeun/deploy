@@ -1,0 +1,2 @@
+[2024-10-10T00:46:23.224+0000] {taskinstance.py:1077} INFO - Dependencies not met for <TaskInstance: convert_yolov9_to_trt.convert_to_trt manual__2024-10-10T00:46:22.573803+00:00 [queued]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_states=_UpstreamTIStates(success=0, skipped=0, failed=0, upstream_failed=0, removed=0, done=0), upstream_task_ids={'log_source_dir'}
+[2024-10-10T00:46:23.226+0000] {local_task_job.py:147} INFO - Task is not able to be run
